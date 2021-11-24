@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Source Serif Pro', serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav{
+padding-top: 2%;
+font-weight: bolder;
+height: 10%;
+background-color: #E2E9C0;
+padding: 3%;
+ 
+   
+  
+
+}
+nav ul li a {
+
+    
+    font-size: 18px;
+    color: black;
+}
+
+
+
+
+
+.container2{
+    
+    padding-top: 4%;
+    padding: 8%;
+    margin: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #26474E;
+    border-radius: 3%;
+}
+
+.formulaire2{
+
+margin-top: 4%;
+display: flex;
+text-align: center;
+flex-direction: column;
+
+width:280px;
+width: 20%;
+
+
+}
+
+input{
+    text-align: center;
+    width: 100%;
+    padding: 5%;
+    
+    
+}
+
+.profil{
+
+
+   text-align: center;
+}
+
+#connexion{
+
+    margin-top: 2% ;
+}
+
+
+
+
+
+.footer{
+    
+    margin-top: 20%;
+    width: 100%;
+    height: 100%;
+    background-color: #E2E9C0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Noto Sans Mono', monospace;
+    
+    
+}
+
+.footer ul li a{
+    transition: all 0.3s ease;
+
+}
+
+.footer ul li {
+    transition: all 0.3s ease;
+
+}
+
+.footer ul li a:hover{
+    padding-left: 8px;
+}
+.footer ul li:hover{
+    padding-left: 8px;
+}
+
+
+.navigation {
+    margin-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    line-height: 2rem;
+}
+.navi{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+}
+.navigation a {
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.footer a:hover{
+    color:#CE6A6B;
+}
+
+.footer li:hover{
+    color:#CE6A6B;
+}
+
+.contact  {
+    color: black;
+    font-weight: bolder;
+    line-height: 2rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-right: 20%;
+    font-size: 14px;
+}
+
+.info{
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.valider{
+    padding: 5%;
+    margin-top: 8%;
+}
