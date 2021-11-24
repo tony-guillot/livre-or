@@ -69,28 +69,29 @@ try {
             </ul>
         </nav>
     </header>
-    <main class="modif1">
+
+
+    <main class="main2">
 
 
 
-        <form classe="modif" action="#" method="post">
+        <form classe="Formulaire2" action="#" method="post">
 
             <h2>Modification de mon profil</h2>
 
-
-            <label>Nom d'utilisateur</label>
+            <div class="input">
+            
             <input type="text" name="newlogin" placeholder="nom d'utilisateur" value="<?php echo @$user['login'] ?>">
 
-            <label>Mot de passe</label>
             <input classe="input-profil" type="password" name='newmdp' placeholder="mot de passe">
-
-
-            <label>Confirmer le mot de passe</label>
-
             <input classe="input-profil" type="password" name='newmdp2' placeholder="Confirmer le   mot de passe">
 
-            <input id='modifier' type="submit" value="Modifier">
-
+            
+            </div>
+            
+            <div class="modifier">
+                <input id='modifier' type="submit" value="Modifier">
+            </div>
         </form>
 
     </main>

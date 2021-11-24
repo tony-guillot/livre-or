@@ -38,13 +38,11 @@ try {
                 $_SESSION['password'] = $userinfo['password'];
                 // le fetch recupère les valeurs de la requete SQL, puis on lui associe les variables de session.
 
-                if ($userinfo['login'] == 'admin') {
-
-                    header('location: admin.php'); //si de nom d'utilisateur est admin alors redirection vers la page admin 
-                }
+                
             } else {
 
-                echo '<p class="erreur">' . 'Mauvais identifiant ou mot de passe' . '</p>';
+                
+                 $erreur = '<p class="erreur">' . 'Mauvais identifiant ou mot de passe' . '</p>';
             }
         }
     }
@@ -71,8 +69,8 @@ try {
                 <li>
                     <a href="index.php">Accueil</a>
                     <a href="connexion.php">Connexion</a>
-                    <a href="inscription1.php">Inscription</a>
-                    <a href="profil1.php">Modifier le profil</a>
+                    <a href="inscription.php">Inscription</a>
+                    <a href="profil.php">Modifier le profil</a>
                 </li>
             </ul>
         </nav>
@@ -83,6 +81,8 @@ try {
 
         <form class="formulaire2" action="#" method="post">
 
+            <?php   echo @$erreur  ?>
+
             <h1>Se connecter</h1>
 
 
@@ -92,7 +92,8 @@ try {
                 
             </div>
 
-            <p class="inscription">Je n'est pas de compte. J'en <a href ='connexion.php'>céer un</a> </p>
+            <div>
+            <p class="inscription">Je n'ai pas de compte. J'en <a href ='connexion.php'>crée un</a> </p>
             <div align='center'>
             <input type="submit" name="valider" value="Se connecter">
             </div>
@@ -101,11 +102,12 @@ try {
 
             <h2 id="connexion">Profil de <?php echo @$userinfo['login']; ?></h2>
 
+            
 
-            <button><a href="deconnexion">Se deconnecter</a></button>
+            <a href="index.php"><input type="submit" value="Se deconnecter"/></a>
 
-            <a href="profil1.php">Modifier mon profil</a>
-        </div>
+            <a href="profil1.php" id="profil_link">Modifier mon profil</a>
+            </div>
 
         </form>
 

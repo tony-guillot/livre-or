@@ -8,11 +8,8 @@
   list-style-type: none;
 }
 
-
-
-
 nav {
-  margin-bottom :10%;
+  margin-bottom: 10%;
   font-weight: bolder;
   height: 10%;
   background-color: #e2e9c0;
@@ -25,36 +22,33 @@ nav ul li a {
   color: black;
 }
 
-
-main{
+main {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-form{
-
+form {
   margin-top: 20px;
-  background-color: #18534F;
-  padding: 3% ;
+  background-color: #18534f;
+  padding: 3%;
   border-radius: 3%;
   min-width: 18%;
 }
 
-form h1{
-    color: #e2e9c0;
-    text-align: center;
+form h1 {
+  color: #e2e9c0;
+  text-align: center;
 }
 
-form .input{
-
+form .input {
   display: flex;
   flex-direction: column;
 }
 
-form .input input[type='text'],input[type='password']{
-
+form .input input[type="text"],
+input[type="password"] {
   margin-top: 5%;
   text-align: center;
   padding: 3%;
@@ -63,25 +57,21 @@ form .input input[type='text'],input[type='password']{
   border: none;
   font-weight: bolder;
   outline: none;
-
 }
 
-form p.inscription{
-
+form p.inscription {
   color: #e2e9c0;
   text-align: center;
   margin-top: 3%;
   margin-bottom: 2%;
   font-size: 14px;
-
 }
 
 form p.inscription a {
-
   color: red;
 }
 
-form input[type='submit']{
+form input[type="submit"] {
   cursor: pointer;
   margin-top: 3%;
   padding: 5%;
@@ -93,25 +83,41 @@ form input[type='submit']{
   background-color: #e2e9c0;
 }
 
+form  .inscription {
 
+margin-top: 4%;
+display: flex;
+justify-content: center;
+}
+.profil {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+  text-align: center;
+}
 
+.profil h2 {
+  color: #e2e9c0;
+}
 
+form .modifier{
+  margin-top: 4%;
+display: flex;
+justify-content: center;
+}
 
+.erreur{
 
+  color: red;
+  text-align: center;
+  margin-bottom: 2%;
+}
 
+.erreur2{
 
-
-
-
-
-
-
-  
-  
-  
-
-
-
+  color: red;
+  text-align: center;
+}
 
 
 
@@ -120,6 +126,7 @@ form input[type='submit']{
   width: 100%;
   height: 100%;
   text-align: center;
+  
   background-color: #e2e9c0;
   display: flex;
   flex-direction: row;
@@ -137,6 +144,7 @@ form input[type='submit']{
 
 .footer ul li a:hover {
   padding-left: 8px;
+  text-align: ;
 }
 .footer ul li:hover {
   padding-left: 8px;
@@ -176,5 +184,9 @@ form input[type='submit']{
   margin-right: 20%;
   font-size: 14px;
 }
+#profil_link{
 
-
+  margin-top: 5%;
+  color:#e2e9c0;
+  font-size: 19px;
+}
