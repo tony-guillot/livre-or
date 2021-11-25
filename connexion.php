@@ -34,7 +34,6 @@ try {
                 $userinfo = $requser->fetch();
                 $_SESSION['id'] = $userinfo['id'];
                 $_SESSION['login'] = $userinfo['login'];
-
                 $_SESSION['password'] = $userinfo['password'];
                 // le fetch recupère les valeurs de la requete SQL, puis on lui associe les variables de session.
 
