@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('bdd.php');
-
+include('navbar.php');
 
 
 
@@ -60,21 +60,8 @@ try {
     <link rel="stylesheet" href="style.css">
     <title>connexion</title>
 </head>
-
+<html>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.php">Accueil</a>
-                    <a href="connexion.php">Connexion</a>
-                    <a href="inscription.php">Inscription</a>
-                    <a href="profil.php">Modifier le profil</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
 
     <main class="main2 ">
 
@@ -116,22 +103,7 @@ try {
     </main>
 
 
-    <footer class="footer">
-
-        <ul class="navigation">
-            <h3 class="navi">Navigation</h3>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="voyage6.html">Contactez-nous</a></li>
-        </ul>
-
-        <ul class="contact">
-            <h3 class="info">Mes informations</h3>
-            <li>Tony Guillot</li>
-            <li>Tony.guillot@laplateforme.io</li>
-            <li><a href="https://github.com/tony-guillot/module-connexion.git">Repository Github</a></li>
-        </ul>
-
-    </footer>
+    <?php   include('footer.php'); ?>
 
 </body>
 

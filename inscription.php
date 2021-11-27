@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('bdd.php');
+include('navbar.php');
 
 try{
 
@@ -23,11 +24,11 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC); // fetch récupère les valeur de la requ
 
         if($row['num'] > 0 ){ // si le numéro de la requete est superieur a 0 c'est qu'il y a au moin une entrée dans la bdd 
 
-            echo '<p class="erreur"> ' .'le nom d\'utilisateur est dejà pris'. '</p>';
+            $msg = '<p class="erreur"> ' .'le nom d\'utilisateur est dejà pris'. '</p>';
 
         }elseif($_POST['mdp'] != $_POST['confirmer']){ // si le mot de passe et la confirmation ne sont pas identique 
 
-            die('les mots de passe se sont pas identique');
+            $msg =  '<p class="erreur"> ' .'les mots de passe se sont pas identique';
         }
             
     else{
@@ -42,11 +43,11 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC); // fetch récupère les valeur de la requ
         if($stmt->execute()){   // si l'execusion de la requete a lieu alors : 
 
             
-            echo 'inscription reussi';
+            $msg =  '<p class="erreur"> ' .'inscription reussi';
 
            }else{ // sinon message d'erreur 
 
-            echo 'echec de l\'inscritpion';
+            $msg= '<p class="erreur"> ' . 'echec de l\'inscritpion';
         }
 
     
@@ -70,24 +71,17 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC); // fetch récupère les valeur de la requ
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.php">Accueil</a>
-                    <a href="connexion.php">Connexion</a>
-                    <a href="inscription1.php">Inscription</a>
-                    <a href="profil1.php">Modifier le profil</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
+    
     <main class="main2 ">
 
         <form class="formulaire2" action="#" method="post">
 
-             
+            <?php 
+            
+            if(isset($msg)){ echo $msg; }
+            
+            
+            ?>
             <h1>Inscription</h1>
 
 
@@ -109,21 +103,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC); // fetch récupère les valeur de la requ
 
     </main>
 
-    <footer class="footer">
-
-        <ul class="navigation">
-            <h3 class="index.php">Accueil</h3>
-            <li><a href=connexion.php>Conneion</a></li>
-            <li><a href="inscription.php">inscription</a></li>
-        </ul>
-
-        <ul class="contact">
-            <h3 class="info">Mes informations</h3>
-            <li>Tony Guillot</li>
-            <li>Tony.guillot@laplateforme.io</li>
-            <li><a href="https://github.com/tony-guillot/module-connexion.git">Repository Github</a></li>
-        </ul>
-
+    <?php   include('footer.php'); ?>
 
 </body>
 

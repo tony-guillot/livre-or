@@ -42,6 +42,12 @@ form h1 {
   text-align: center;
 }
 
+form h2 {
+
+  color: #e2e9c0;
+  text-align: center;
+}
+
 form .input {
   display: flex;
   flex-direction: column;
@@ -189,4 +195,11 @@ justify-content: center;
   margin-top: 5%;
   color:#e2e9c0;
   font-size: 19px;
+}
+
+.index{
+
+  color : red;
+  display: flex;
+  justify-content: space-around;
 }
