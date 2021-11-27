@@ -17,7 +17,7 @@ if(isset($_SESSION['id'])){
             if($_SESSION['id']) {
 
 	            $ins = $bdd->prepare('INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES (?,?,NOW())');
-	            $ins->execute(array($commentaire,$getid));
+	            $ins->execute(array($commentaire, $getid));
 	            
                 $mgs= "Votre commentaire a bien été posté";
 	         }
