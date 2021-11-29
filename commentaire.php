@@ -4,12 +4,17 @@ include('bdd.php');
 include('navbar.php');
 
 try {
+    if(!isset($_SESSION['id'])){
+
+        header("location: connexion.php");
+
+     }
     if (isset($_SESSION['id'])) {
         $getid = $_SESSION['id'];
         $usercom = $bdd->prepare('SELECT * FROM utilisateurs WHERE id = ?');
         $usercom->execute(array($getid));
         $usercom = $usercom->fetch();
-
+        
         if (isset($_POST['submit_commentaire'])) {
 
             if (isset($_SESSION['id'], $_POST['commentaire']) and !empty($_POST['commentaire'])) {
@@ -22,7 +27,9 @@ try {
 
                     $msg = " Votre commentaire a bien été posté ";
                 }
-            } else {
+            }
+
+             else {
                 $msg = "Tous les champs doivent être complétés";
             }
         }
@@ -33,7 +40,7 @@ try {
 }
 
 $commentaires = $bdd->prepare('SELECT * FROM commentaires WHERE commentaire = ? ORDER BY id DESC');
-$commentaires->execute(array($getid));
+$commentaires->execute(array(@$getid));
 ?>
 
 <!DOCTYPE html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('navbar.php');
 
 ?>
@@ -23,6 +24,7 @@ include('navbar.php');
             <a href="inscription.php"></a>
             <a href="https://github.com/tony-guillot/livre-or.git">Repo Github</a>
         </div>
+        
     </main>
 
     <?php   include('footer.php'); ?>

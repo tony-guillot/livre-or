@@ -89,21 +89,23 @@ try {
             <h2 id="connexion">Profil de <?php echo @$userinfo['login']; ?></h2>
 
             
+            
 
-            <a href="index.php"><input type="submit" value="Se deconnecter"/></a>
 
             <a href="profil1.php" id="profil_link">Modifier mon profil</a>
             </div>
 
         </form>
 
-
+        <form action="deconnexion.php" id="deco">
+            <input type="submit" ' value="Se deconnecter"/>
+        </form>
 
         
     </main>
 
 
-    <?php   include('footer.php'); ?>
+    <?php var_dump($_SESSION['id']);  include('footer.php'); ?>
 
 </body>
 

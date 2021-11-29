@@ -16,20 +16,22 @@ include('navbar.php');
 </head>
 
 <body>
-    <div class="commentaires">
+    
 
-        <H1>Commentaires</H1>
+        
 
         <?php
 
 
         $insert = $bdd->prepare("SELECT *FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id  = commentaires.id_utilisateur ");
         $comment  = $insert->execute();
-
-
+        ?>
+        <div class="commentaires">
+        <H1>Commentaires</H1>
+        <?php
         while ($comment = $insert->fetch()) {
 
-            echo $comment['login'] . ':' . ' ' . $comment['commentaire'] . '   ' . $comment['date'];
+            echo $comment ['login'] . ':' . ' ' . $comment['commentaire'] . '  '. ':' . $comment['date'] . '<br /> <br />';
         }
         ?>
 
