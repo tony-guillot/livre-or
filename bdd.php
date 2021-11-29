@@ -1,9 +1,9 @@
 <?php
 
 $servname = 'localhost';
-$dbname = $dbname = 'livreor';    // log de connexion à la bdd 
-$user = 'root';
-$mdp ='';
+$dbname = $dbname = 'tony-guillot_livreor';    // log de connexion à la bdd 
+$user = 'tony';
+$mdp ='toto199800912';
 
 try{
 $bdd = new PDO("mysql:host=$servname;dbname=$dbname","$user","$mdp");//connexion à la bdd
