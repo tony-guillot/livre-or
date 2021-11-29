@@ -29,7 +29,7 @@
                 <h3 class="info">Mes informations</h3>
                 <li>Tony Guillot</li>
                 <li>Tony.guillot@laplateforme.io</li>
-                <li><a href="https://github.com/tony-guillot/module-connexion.git">Repository Github</a></li>
+                <li><a href="https://github.com/tony-guillot/livre-or">Repository Github</a></li>
             </ul>
 
       </footer> 
